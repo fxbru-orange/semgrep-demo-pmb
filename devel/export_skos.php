@@ -1,6 +1,6 @@
 <?php
 // +-------------------------------------------------+
-// © 2002-2014 PMB Services / www.sigb.net pmb@sigb.net et contributeurs (voir www.sigb.net)
+// Â© 2002-2014 PMB Services / www.sigb.net pmb@sigb.net et contributeurs (voir www.sigb.net)
 // +-------------------------------------------------+
 // $Id: export_skos.php,v 1.5.6.1 2023/10/17 14:03:22 tsamson Exp $
 
@@ -22,6 +22,7 @@ header('Content-Disposition: attachment; filename="'.$tname.'.xml"');
 //ARC2 attend des infos en UTF-8
 pmb_mysql_query("SET NAMES 'UTF8'");
 
+//$res=pmb_mysql_query("select * from thesaurus where id_thesaurus=".$numt);
 $res=pmb_mysql_query("select * from thesaurus where id_thesaurus=".$numt);
 $rt=pmb_mysql_fetch_object($res);
 
